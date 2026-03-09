@@ -1,0 +1,374 @@
+{
+  "datasets": [
+    {
+      "name": "42937850",
+      "displayName": "chat gpt interaction data overview",
+      "queryLines": [
+        "SELECT \n",
+        "  *,\n",
+        "  DATEDIFF(`End Date`, `Start Date`) AS `Duration (Days)`\n",
+        "FROM chat_gpt_data"
+      ],
+      "columns": [
+        {
+          "displayName": "Duration (Days)",
+          "description": "Campaign duration in days",
+          "expression": "DATEDIFF(`End Date`, `Start Date`)"
+        }
+      ],
+      "catalog": "workspace",
+      "schema": "csv"
+    }
+  ],
+  "pages": [
+    {
+      "name": "96e263ba",
+      "displayName": "Social Media Statistics",
+      "layout": [
+        {
+          "widget": {
+            "name": "09692c2e",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "42937850",
+                  "fields": [
+                    {
+                      "name": "Campaign Name",
+                      "expression": "`Campaign Name`"
+                    },
+                    {
+                      "name": "sum(Impressions)",
+                      "expression": "SUM(`Impressions`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "frame": {
+                "title": "Total Impressions by Campaign",
+                "showTitle": true
+              },
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "Campaign Name",
+                  "displayName": "Campaign Name",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                },
+                "y": {
+                  "fieldName": "sum(Impressions)",
+                  "displayName": "Total Impressions",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "color": {
+                  "fieldName": "Campaign Name",
+                  "displayName": "Campaign Name",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                },
+                "label": {
+                  "show": true
+                }
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 3,
+            "width": 10,
+            "height": 6
+          }
+        },
+        {
+          "widget": {
+            "name": "3b4935e8",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "42937850",
+                  "fields": [
+                    {
+                      "name": "sum(Conversions)",
+                      "expression": "SUM(`Conversions`)"
+                    },
+                    {
+                      "name": "Channel",
+                      "expression": "`Channel`"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "frame": {
+                "title": "Conversions by Channel",
+                "showTitle": true
+              },
+              "widgetType": "pie",
+              "encodings": {
+                "angle": {
+                  "fieldName": "sum(Conversions)",
+                  "scale": {
+                    "type": "quantitative"
+                  },
+                  "displayName": "Total Conversions"
+                },
+                "color": {
+                  "fieldName": "Channel",
+                  "displayName": "Channel",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                },
+                "label": {
+                  "show": true
+                }
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 9,
+            "width": 5,
+            "height": 6
+          }
+        },
+        {
+          "widget": {
+            "name": "047e7b98",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "42937850",
+                  "fields": [
+                    {
+                      "name": "Campaign Name",
+                      "expression": "`Campaign Name`"
+                    },
+                    {
+                      "name": "Duration (Days)",
+                      "expression": "`Duration (Days)`"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "frame": {
+                "title": "Campaign Duration",
+                "showTitle": true
+              },
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "Campaign Name",
+                  "displayName": "Campaign Name",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                },
+                "y": {
+                  "fieldName": "Duration (Days)",
+                  "displayName": "Duration (Days)",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "color": {
+                  "fieldName": "Campaign Name",
+                  "displayName": "Campaign Name",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                },
+                "label": {
+                  "show": true
+                }
+              }
+            }
+          },
+          "position": {
+            "x": 5,
+            "y": 9,
+            "width": 6,
+            "height": 6
+          }
+        },
+        {
+          "widget": {
+            "name": "9ddd8871",
+            "queries": [
+              {
+                "name": "dashboards/01f10f60641f17bda5513aa4d4acd25f/datasets/01f10f60668b1fd6bb5ed2edc140efec_Channel",
+                "query": {
+                  "datasetName": "42937850",
+                  "fields": [
+                    {
+                      "name": "Channel",
+                      "expression": "`Channel`"
+                    },
+                    {
+                      "name": "Channel_associativity",
+                      "expression": "COUNT_IF(`associative_filter_predicate_group`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "frame": {
+                "showTitle": true
+              },
+              "widgetType": "filter-single-select",
+              "encodings": {
+                "fields": [
+                  {
+                    "fieldName": "Channel",
+                    "queryName": "dashboards/01f10f60641f17bda5513aa4d4acd25f/datasets/01f10f60668b1fd6bb5ed2edc140efec_Channel"
+                  }
+                ]
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 2,
+            "width": 4,
+            "height": 1
+          }
+        },
+        {
+          "widget": {
+            "name": "2f215e44",
+            "multilineTextboxSpec": {
+              "lines": [
+                "Campaign Dashboard for Performance Analytics"
+              ]
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "width": 12,
+            "height": 2
+          }
+        },
+        {
+          "widget": {
+            "name": "3ef6ba1d",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "42937850",
+                  "fields": [
+                    {
+                      "name": "Campaign Name",
+                      "expression": "`Campaign Name`"
+                    },
+                    {
+                      "name": "Channel",
+                      "expression": "`Channel`"
+                    },
+                    {
+                      "name": "sum(Impressions)",
+                      "expression": "SUM(`Impressions`)"
+                    }
+                  ],
+                  "cubeGroupingSets": {
+                    "sets": [
+                      {
+                        "fieldNames": [
+                          "Campaign Name"
+                        ]
+                      },
+                      {
+                        "fieldNames": [
+                          "Channel"
+                        ]
+                      }
+                    ]
+                  },
+                  "disaggregated": false,
+                  "orders": [
+                    {
+                      "direction": "ASC",
+                      "expression": "`Campaign Name`"
+                    },
+                    {
+                      "direction": "ASC",
+                      "expression": "`Channel`"
+                    }
+                  ]
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "frame": {
+                "title": "Campaign Impressions",
+                "showTitle": true
+              },
+              "widgetType": "pivot",
+              "encodings": {
+                "rows": [
+                  {
+                    "fieldName": "Campaign Name",
+                    "displayName": "Campaign Name"
+                  }
+                ],
+                "columns": [
+                  {
+                    "fieldName": "Channel"
+                  }
+                ],
+                "cell": {
+                  "type": "multi-cell",
+                  "fields": [
+                    {
+                      "fieldName": "sum(Impressions)",
+                      "cellType": "text",
+                      "displayName": "Total Impressions"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 15,
+            "width": 6,
+            "height": 6
+          }
+        }
+      ],
+      "pageType": "PAGE_TYPE_CANVAS",
+      "layoutVersion": "GRID_V1"
+    }
+  ],
+  "uiSettings": {
+    "theme": {
+      "widgetHeaderAlignment": "ALIGNMENT_UNSPECIFIED"
+    },
+    "applyModeEnabled": false
+  }
+}
