@@ -1,0 +1,19 @@
+# This is a Databricks asset bundle definition for mjanowiak_databricks.
+# The Databricks extension requires databricks.yml configuration file.
+# See https://docs.databricks.com/dev-tools/bundles/index.html for documentation.
+
+bundle:
+  name: mjanowiak_databricks
+
+targets:
+  dev:
+    mode: development
+    default: true
+    workspace:
+      host: https://dbc-c98eb2fb-a8c5.cloud.databricks.com
+
+  ## Optionally, there could be 'staging' or 'prod' targets here.
+  #
+  # prod:
+  #   workspace:
+  #     host: https://dbc-c98eb2fb-a8c5.cloud.databricks.com

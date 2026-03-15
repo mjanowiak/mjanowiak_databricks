@@ -35,3 +35,11 @@
     - LLM Summarizer has to sort thru lots of irrelevant stuff.
     - Decrease Top K, Implement Re-ranker, Increase Similarity Score, Choose more robust embeddings.
 
+- Register Model Signature - allows for proper inputs and outputs to be known and sent.
+
+Model Types Available
+Cost Considerations
+- Low Request volume - use pay as go models
+
+Share data from Production to Development.
+- Create a development specific view of the Production data using the unity catalog.
