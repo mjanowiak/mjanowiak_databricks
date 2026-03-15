@@ -1,14 +1,24 @@
-# This is part of the Databricks Generative AI certification Coursework.
+# Databricks Generative AI Coursework
 
-Many notebooks, dashboards, and other sample code from the coursework are contained here.
-The most notable coursework is the `Studebaker_RAG_LLM.ipynb` notebook where I built a sample RAG LLM API and evaluated the output of that solution using **MLFLOW Evaluations 2.x and 3.x**.  
+This repository contains notebooks, dashboards, and supporting files created as part of Databricks Generative AI coursework.
+
+The main project in this repo is `Studebaker_RAG_LLM.ipynb`. That notebook uses Studebaker shop manual content to build a simple retrieval-augmented generation (RAG) workflow in Databricks. The manual content is indexed in Databricks Vector Search, queried through a LangChain-based chain, and answered with a Databricks-hosted model endpoint.
+
+It also shows a simple evaluation workflow for generative AI outputs. Sample answers are saved as ground-truth text files, then compared against fresh RAG responses using **MLflow Evaluations 2.x and 3.x**. This makes the notebook a compact end-to-end example of Databricks-based document retrieval, prompt-driven question answering, and output evaluation.
+
+## What This Project Contains
+
+- Databricks notebooks from Generative AI coursework and experiments.
+- The Studebaker RAG notebook, which is the primary end-to-end example in the repo.
+- Ground-truth text files used to evaluate generated answers from the Studebaker shop manual data.
+- Sample dashboards and supporting assets tied to the coursework.
 
 ![Studebaker Shop Manual](assets/studebaker_shop_manual.jpg)
 
 ## LLM + RAG System
-This project utilizes the CD-ROM Studebaker Shop Manual data, ingests it into a databricks vector database and utilizes that vector store with a langchain LLM Chain.  
+This project uses CD-ROM Studebaker Shop Manual data, loads it into Databricks Vector Search, and queries that vector store through a LangChain RAG chain.
 
-The solution utilizes ML Flow to validate some sample queries to gain some experience with MLFLow evaluations and Databricks usage of MLFlow.  
+The resulting answers are compared against simple ground-truth responses so the project can demonstrate MLflow evaluation inside Databricks.
 
 ## Picture of Solution
 ![Project Flow Diagram](assets/vector_store_flow.png)
@@ -46,5 +56,5 @@ Relevant figures and diagrams can be found in the provided context, specifically
 The part numbers for the impacted components are not directly stated in the provided context, but the following components are mentioned:
 - Main link (4, Fig. 35)
 - Main link nut (6, Fig. 35)
-- Wiper motor (3, Fig. 33 and ******
+- Wiper motor (3, Fig. 33)
 ```
