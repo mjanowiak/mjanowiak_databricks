@@ -1,0 +1,22 @@
+To repair the windshield wiper motor on a Studebaker truck, the steps vary depending on whether it's an electric or vacuum type wiper motor. 
+
+For the electric type wiper motor:
+1. Disconnect the wiper motor wires from the switch and circuit breaker.
+2. Remove the cover (5, Fig. 35) and the main link nut (6) to remove the main link (4) from the wiper motor.
+3. Remove the four retaining bolts and remove the motor (3, Fig. 35).
+4. For disassembly, remove the three screws holding the mounting bracket to the wiper motor and remove the bracket.
+5. Remove the two screws from the clip holding the wiring cable to the parking switch plate (1, Fig. 36).
+
+For reassembly of the electric type:
+1. Install the armature (16, Fig. 36).
+2. Install the brush springs (17) and brushes (18) in the commutator end.
+
+For the vacuum type wiper motor:
+1. Disconnect the wiper motor vacuum hose (3, Fig. 33).
+2. Remove the clamp screw which holds the valve control cable to the motor and remove the end of the cable from the valve.
+3. Remove the clips (10, Fig. 24) that retain the connecting links to the wiper drive (11).
+4. Remove the two nuts and screws that hold the wiper motor and remove the motor.
+
+The relevant part numbers are not explicitly mentioned for the windshield wiper motor components in the provided context. However, the figures mentioned (e.g., Fig. 35, Fig. 36, Fig. 33, Fig. 24) are referenced in the Studebaker repair manual for component identification.
+
+Reference: Studebaker repair manual, "BODY—WINDSHIELD WIPER" section.

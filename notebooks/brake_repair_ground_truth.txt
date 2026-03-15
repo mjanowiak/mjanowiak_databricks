@@ -1,0 +1,28 @@
+To replace a front brake shoe on a Studebaker truck (3/4-1 1/2 and 2 Ton Models), follow these steps as outlined in the BRAKE SYSTEM—SERVICE BRAKES section of the manual:
+
+1. Place a wheel cylinder clamp across the boots of the wheel cylinder (3, Fig. 20) to prevent the pistons from coming out.
+2. Remove the shoe return spring (4) and anchor spring (5).
+3. Remove the C washers (1) and plain washers (2) from the brake shoe eccentric pins.
+4. Pull the heel of the shoe away from the anchor block (6), lift it from the backing plate until it is clear of the eccentric pin, and then pull it away from the wheel cylinder to remove the shoe.
+
+To install a new front brake shoe:
+
+1. Insert the toe of the shoe web into the slotted area of the wheel cylinder.
+2. Place the shoe over the eccentric pin and set the heel of the shoe against the anchor block (6, Fig. 20).
+3. Install the plain washers (2) and C washers (1).
+4. Install the anchor spring (5) and shoe return spring (4).
+5. Remove the wheel cylinder clamp.
+6. Turn the shoe adjusting eccentrics to the fully released position and center the shoes on the backing plate.
+7. Re-pack the wheel bearings with lubricant.
+8. Install the hub and drum assembly and adjust the wheel bearings.
+
+Reference: BRAKE SYSTEM—SERVICE BRAKES section, Fig. 20. 
+
+The relevant part numbers are:
+- C washers (1)
+- Plain washers (2)
+- Shoe return spring (4)
+- Anchor spring (5)
+- Anchor block (6) 
+
+Please verify the part numbers for your specific Studebaker truck model.
